@@ -1,0 +1,284 @@
+/*
+Theme Name: Plus de Santé
+Description: Thème pour Plus de Santé
+Version: 1.21
+Author: Antoine GAUTIER
+Author URI: http://gautierantoine.com
+Date: 19 03 27
+*/
+
+@charset "UTF-8";
+
+/* code couleur
+
+plasma grav
+212, 96, 108
+plus de sante
+81, 158, 245
+Plus de Joie
+85, 136, 241
+plus de vie
+23, 115, 218
+
+*/
+
+body{
+	background-color: rgb(85, 136, 241);
+	font:normal 1em/1em Helvetica,Arial,sans-serif;
+}
+#logo h1{
+	font-size: 3em !important;
+	line-height: 1em;
+	font-weight:bold;
+	text-align:center;
+}
+details summary{
+	text-align:center;
+  /* margin: 4px; */
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.2);
+  font-family: verdana;
+  padding: 15px;
+}
+details summary:hover{
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+#nav{
+	text-align: center;
+}
+.logo{
+	font-size: 50px;
+	text-align: center;
+	line-height: 140px;
+}
+ul.menu > li{
+	float: left;
+	position:center;
+	list-style: none outside none;
+	padding: 10px 10px;
+	border-right: 2px solid rgba(255,255,255,0.7);
+}
+
+
+li.current-menu-item {
+	background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.show, .hide  {
+	font-weight:900;
+	font-size:1.4em;
+	border-top: 2px solid rgba(255, 255, 255, 0.8);
+	padding-top:10px
+}
+
+ul.menu > li{
+	background-color: rgba(0, 0, 0, 0.1);
+	border-top: 3px solid white;
+}
+ul.menu > li:hover {background: rgba(255, 255, 255, 0.2);}
+
+header { background-color: rgba(0, 0, 0, 0); }
+
+footer { background-color: rgba(255, 255, 255, 1); }
+
+/* normal */
+
+.post-content{
+	background-color: rgba(255, 255, 255, 0.5);
+	color: black;
+	border: 3px white solid;
+	width: 100%;
+	float: left;
+	margin: -2px 0px 3px;
+}
+#wrapper {
+	border: 1px #a2a2a2 solid;
+	display: block;
+	width:90%;
+	margin:0px auto;
+	background-size: cover;
+	height: 100%;
+	background-position: 100% 0;
+}
+#content {
+	width: 100%;
+	float: left;
+}
+
+#delimiter { clear: both; }
+
+
+/* Textes */
+
+a {
+	color: #0042FF;
+	text-decoration: none;
+}
+
+header a {
+	color: white;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+h1{
+	font-weight: normal;
+	padding: 4px;
+	margin:4px;
+	font-size: 25px;
+}
+h2{ font-size: 23px;
+}
+h3{ font-size: 21px;
+}
+h4{ font-size: 15px;
+}
+h5{ font-size: 12px;
+}
+h6{ font-size: 10px;
+}
+
+li, td, b, p, a{
+	font-size: 18px;
+	line-height: 22px;
+}
+
+li{ list-style: none; }
+
+.wp-post-image{
+	width: 100%;
+	height: 100%;
+}
+
+ol{
+	margin: 20px
+}
+
+*{
+	margin:0;
+	padding:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* RESPONSIVE */
+
+@media only screen and ( min-width: 1200px ) {
+	#nav > a{
+			display:none !important;;
+	}
+	.logo{
+		width: 16%;
+		margin-left: calc( 50% - 8%);
+	}
+	 ul.menu > li{
+            width: calc(100% / 3) !important;
+            overflow: hidden;
+    }
+}
+
+@media only screen and ( min-width: 992px )   and (max-width: 1200px ) {
+	#nav > a{
+			display:none !important;;
+	}
+	.logo{
+		width: 20%;
+		margin-left: calc( 50% - 10%);
+	}
+	ul.menu > li{
+            width: calc(100% / 3) !important;
+  }
+}
+
+@media only screen and ( min-width: 768px )  and (max-width: 992px ) {
+	#nav > a{
+			display:none !important;;
+	}
+	.logo{
+		width: 25%;
+		margin-left: calc( 50% - 12.5%);
+	}
+	ul.menu > li{
+            width: calc(100% / 3) !important;
+    }
+}
+
+@media only screen and ( max-width: 768px ) and (min-width: 420px ) {
+  #nav > a{
+        display:none !important;;
+	}
+	.logo{
+		width: 30%;
+		margin-left: calc( 50% - 15%);
+	}
+	ul.menu > li{
+            width: calc(100% / 3) !important;
+  }
+}
+
+@media only screen and ( max-width: 420px ) {
+	.hide{display:none;}
+	#nav:target > .show {display:none;}
+	#nav:not( :target ) > a:first-of-type,
+        #nav:target > a:last-of-type{
+           display: block;
+	}
+	#nav:target > ul{
+            display: block;
+	}
+  #nav > ul{
+		display: none;
+	}
+	.logo{
+		width: calc( 100% / 2 );
+		margin: 0% calc( 100% / 4 );
+	}
+	ul.menu > li{
+        width: 100%;
+		border-right: 0px solid rgba(255,255,255,0.7);
+  }
+}
+
+/* petit */
+
+@media only screen and ( max-width: 640px ) {
+  #nav > a{
+		margin-bottom: 10px;
+	}
+    #nav > ul{
+        height: auto;
+	/*  display: none; */
+        position: relative;
+        left: 0;
+        right: 0;
+	}
+  #nav li ul{
+        position: static;
+	}
+	details .text{
+		    margin: 10px 5%;
+	}
+
+}
+
+@media only screen and ( min-width: 640px ) {
+  #nav li{
+        position: relative;
+	}
+  #nav > ul{
+    /*   height: 3.75em; */
+	}
+  #nav li ul{
+        display: none;
+        position: absolute;
+        top: 100%;
+	}
+  #nav li:hover ul{
+    display: block;
+	}
+	details .text{
+		    margin: 10px 15%;
+	}
+}
