@@ -1,7 +1,7 @@
 /*
-Theme Name: Plus de Santé
-Description: Thème pour Plus de Santé
-Version: 1.21
+Theme Name: Plus de
+Description: Thème pour +2
+Version: 1.22
 Author: Antoine GAUTIER
 Author URI: http://gautierantoine.com
 Date: 19 03 27
@@ -31,7 +31,7 @@ body {
 	background-color: rgb(85, 136, 241);
 	font:normal 1em/1em Helvetica,Arial,sans-serif;
 }
-body.home .post-content div#post-index {
+body.home div#post-index, body.page div#post-index {
 	width: 90% !important;
 	margin-left: 5%;
 }
@@ -40,11 +40,11 @@ body.category summary {
 	/* border-bottom: 2px solid white; */
 	/*! margin: 2px 0px; */
 }
+body.home .post-content, body.page .post-content {
+  padding: 20px 0px;
+}
 
-
-
-
-
+/* DETAILS */
 
 details {
 	border-bottom: 1px solid white;
@@ -73,8 +73,9 @@ details summary {
   padding: 15px;
 	cursor: pointer;
 	color: white;
-
+  line-height: 1em;
 	list-style: none;
+	transition: 0.3s ease-out;
 }
 details summary::-webkit-details-marker {
   display: none;
@@ -87,6 +88,24 @@ details .text {
 	/* box-shadow: -10px 0 8px -8px rgba(255, 255, 255, 0.4), 10px 0 8px -8px rgba(255, 255, 255, 0.4); */
 }
 
+
+/* specific animation */
+/* https://daneden.me/animate/ */
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-.75em);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+details[open] {
+	animation-name: fadeInDown;
+  animation-duration: 0.5s;
+}
 
 /* Details border radius top/bottom */
 .post-category:first-child summary,
@@ -145,7 +164,7 @@ footer {
 }
 .nav-brand:hover {
 	letter-spacing: 5px;
-	color: rgba(255,255,255,0.5)
+	color: rgba(255,255,255,0.95)
 }
 ul.menu > li {
 	float: left;
@@ -153,6 +172,7 @@ ul.menu > li {
 	list-style: none outside none;
 	padding: 10px 0px;
 	border-right: 2px solid rgba(255,255,255,0.7);
+	transition: 0.2s ease-out;
 }
 ul.menu > li:last-child {
 	border-right: 0px solid rgba(255,255,255,0.7);
@@ -163,18 +183,30 @@ li.current-menu-item {
 }
 
 .show, .hide {
-	font-weight: 900;
+	font-weight: 600;
 	font-size: 1.4em;
-	border-top: 2px solid rgba(255, 255, 255, 0.8);
-	padding-top: 10px;
+	/*! border-top: 2px solid rgba(255, 255, 255, 0.8); */
+	padding: 10px 0px;
+	background-color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+	transition: 0.4s ease-out;
 }
-
+.show:hover, .hide:hover {
+	font-size: 1.6em;
+	background-color: rgba(0,0,0,0.3);
+  color: rgba(255,255,255,0.7);
+}
 ul.menu > li {
 	background-color: rgba(0, 0, 0, 0.1);
 	/* border-top: 3px solid white; */
+  overflow: hidden;
+  white-space: nowrap;
 }
 ul.menu > li:hover {
   background: rgba(0, 0, 0, 0.2);
+}
+ul.menu > li:hover a {
+	/* font-size: 1.2em; */
 }
 header a {
 	color: white;
@@ -212,8 +244,8 @@ body.category .post-content {
 #content {
 	width: 100%;
 	float: left;
-	border-top: 2px solid rgba(0,0,0,0.5);
-	border-bottom: 2px solid rgba(0,0,0,0.5);
+	/* border-top: 2px solid rgba(0,0,0,0.5); */
+	/* border-bottom: 2px solid rgba(0,0,0,0.5); */
   border-radius: 0px;
 }
 body.category #content {
@@ -284,7 +316,7 @@ ol {
 }
 @media only screen and ( max-width: 420px ) {
   #nav > a {
-		margin-bottom: 10px;
+		/* margin-bottom: 10px; */
 	}
 	.hide,
 	#nav:target > .show,
