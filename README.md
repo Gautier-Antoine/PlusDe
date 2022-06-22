@@ -1,8 +1,12 @@
 # PlusDe
 Website Template Plus De Sante / Vie / Joie
 
+[plusdejoie](https://plusdejoie.net/)
+[plusdevie](https://plusdevie.net/)
+[plusdesante](https://plusdesante.net/)
 
-=== Theme Name ===
+
+=== PLUS-DE ===
 
 Author: GAUTIER Antoine
 Author URI: gautierantoine.com
@@ -31,17 +35,3 @@ Theme for Plus De Sante / Vie / Joie
 = Where is the customizer =
 When connected on the Dashboard go to:
 Appearance > Customize > Colors > Background Color.
-
-== Changelog ==
-
-= 1.0 YYYY-MM-DD =
-* Added new options
-
-== Upgrade Notice ==
-
-= 1.0 YYYY-MM-DD =
-* Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-== Resources ==
-* magnify.jpg © 2014 Jane Doe, CC0
-* supermenu.js © 2013-2015 James Today, MIT
